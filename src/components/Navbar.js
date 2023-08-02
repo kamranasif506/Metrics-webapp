@@ -4,12 +4,12 @@ import { Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav className="navbar navbar-expand-lg navbar-dark" style={{ background: '#3F1052' }}>
     <div className="container">
       <FaAngleLeft className="mr-auto" />
       <div className="form-group mr-auto">
         <Dropdown>
-          <Dropdown.Toggle variant="primary" id="dropdown-primary">
+          <Dropdown.Toggle variant="primary" id="dropdown-primary" style={{ background: '#53116E !important', color: 'white !important', border: 'var(--bs-btn-border-width) solid #3F1052 !important' }}>
             2023
           </Dropdown.Toggle>
 
