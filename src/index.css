@@ -40,7 +40,7 @@ body {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-  background: var(--clr-grey-10);
+  background: #005de6 !important;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -104,6 +104,7 @@ p {
 
   body {
     font-size: 1rem;
+    background-color: #005de6 !important;
   }
 
   h1,
