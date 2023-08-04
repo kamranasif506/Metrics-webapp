@@ -1,5 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const LeagueList = ({
   id, name, logo, rank,
@@ -10,11 +11,14 @@ const LeagueList = ({
       cursor: 'pointer', color: '#3F1052', borderLeft: '1px solid #53116E', borderBottom: '1px solid #53116E',
     }}
   >
-    <div id={id} className="w-100">
-      <img src={logo} style={{ width: '50%', paddingTop: '5%' }} alt={name} className="img mx-auto" />
-      <p className="d-flex justify-content-end m-0" style={{ color: '#3F1052', paddingRight: '3%', fontWeight: 'bold' }}>{name}</p>
-      <p className="d-flex justify-content-end m-0" style={{ color: '#3F1052', paddingRight: '3%', fontWeight: 'bold' }}>{rank}</p>
-    </div>
+    <Link to={`/league/${id}`} style={{ textDecoration: 'none' }}>
+
+      <div id={id} className="w-100">
+        <img src={logo} style={{ width: '50%', paddingTop: '5%' }} alt={name} className="img mx-auto" />
+        <p className="d-flex justify-content-end m-0" style={{ color: '#3F1052', paddingRight: '3%', fontWeight: 'bold' }}>{name}</p>
+        <p className="d-flex justify-content-end m-0" style={{ color: '#3F1052', paddingRight: '3%', fontWeight: 'bold' }}>{rank}</p>
+      </div>
+    </Link>
   </div>
 );
 

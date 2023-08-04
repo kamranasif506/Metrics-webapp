@@ -84,10 +84,17 @@ h4 {
 p {
   margin-bottom: 1.25rem;
 }
+#statTitle {
+  font-size: 1.1rem;
+}
 
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
+  }
+
+  #statTitle {
+    font-size: 2rem;
   }
 
   h2 {
@@ -363,4 +370,10 @@ hr {
 .btn-container {
   display: flex;
   justify-content: space-around;
+}
+
+#dropdown-primary {
+  background: #775685 !important;
+  color: white !important;
+  border: var(--bs-btn-border-width) solid #3F1052 !important;
 }

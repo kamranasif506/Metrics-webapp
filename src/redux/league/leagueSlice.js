@@ -1,17 +1,16 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { baseUrl, apikey } from '../../config/config';
 
-const leagueUrl = 'https://v3.football.api-sports.io/standings?league=39&season=2023';
-const apiKey = '500de7e2f8a3b6c55d44bf8e8f05bded';
 const headers = {
   'x-rapidapi-host': 'v3.football.api-sports.io',
-  'x-rapidapi-key': apiKey,
+  'x-rapidapi-key': apikey,
 };
 
 export const fetchLeagueData = createAsyncThunk(
   'leagues/fetchLeagueData',
-  async () => {
-    const response = await axios.get(leagueUrl, { headers });
+  async (year) => {
+    const response = await axios.get(`${baseUrl}&season=${year}`, { headers });
     return response.data.response;
   },
 );
@@ -31,6 +30,8 @@ const leagueSlice = createSlice({
       })
       .addCase(fetchLeagueData.fulfilled, (state, action) => {
         state.isLoading = false;
+        // if(Object.keys(action.payload))
+        // console.log(action);
         state.leagueData = action.payload[0].league;
       })
       .addCase(fetchLeagueData.rejected, (state) => {

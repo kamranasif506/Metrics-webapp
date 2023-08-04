@@ -4,11 +4,19 @@ import LeagueList from './LeagueList';
 
 const Leagues = () => {
   const leagueData = useSelector((store) => store.leagues.leagueData);
+
   return (
     <section className="container-fluid">
       <div className="row">
         <div className="col-6 m-auto">
-          <img src={leagueData.logo} style={{ width: '70%', margin: '0 auto' }} alt={leagueData.name} className="img" />
+          <img
+            src={leagueData.logo}
+            style={{
+              width: '70%', margin: '0 auto', paddingTop: '2%', paddingBottom: '2%',
+            }}
+            alt={leagueData.name}
+            className="img"
+          />
         </div>
         <div className="col-6 mx-auto my-auto">
           <h1 className="m-0" style={{ fontWeight: 'bold', color: '#3F1052' }}>{ leagueData.name }</h1>
