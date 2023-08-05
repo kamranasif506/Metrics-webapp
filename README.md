@@ -98,7 +98,7 @@ Run this command:
 
 ```sh
   cd my-folder
-  git clone https://github.com/kamranasif506/math-magician.git
+  git clone https://github.com/kamranasif506/Metrics-webapp.git
 ```
 
 ### Install
