@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { FaCircleArrowRight } from 'react-icons/fa6';
 import { fetchTeamData } from '../redux/teams/teamSlice';
 
 const Team = () => {
@@ -11,7 +12,7 @@ const Team = () => {
 
   useEffect(() => {
     dispatch(fetchTeamData({ id, year: '2022' }));
-  }, [dispatch]);
+  }, [dispatch, id]);
   // console.log(isLoading);
   if (isLoading) {
     return (
@@ -68,7 +69,11 @@ const Team = () => {
             <p className="my-auto">Played</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.all.played }</p>
+            <p className="my-auto">
+              { teamData.all.played }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
 
@@ -77,7 +82,11 @@ const Team = () => {
             <p className="my-auto">Won</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.all.win }</p>
+            <p className="my-auto">
+              { teamData.all.win }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -85,7 +94,11 @@ const Team = () => {
             <p className="my-auto">Lose</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.all.lose }</p>
+            <p className="my-auto">
+              { teamData.all.lose }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -93,7 +106,11 @@ const Team = () => {
             <p className="my-auto">Draw</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.all.draw }</p>
+            <p className="my-auto">
+              { teamData.all.draw }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -101,7 +118,11 @@ const Team = () => {
             <p className="my-auto">GF</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.all.goals.for }</p>
+            <p className="my-auto">
+              { teamData.all.goals.for }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -109,7 +130,11 @@ const Team = () => {
             <p className="my-auto">GA</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.all.goals.against }</p>
+            <p className="my-auto">
+              { teamData.all.goals.against }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
       </section>
@@ -122,7 +147,11 @@ const Team = () => {
             <p className="my-auto">Played</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.home.played }</p>
+            <p className="my-auto">
+              { teamData.home.played }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
 
@@ -131,7 +160,11 @@ const Team = () => {
             <p className="my-auto">Won</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.home.win }</p>
+            <p className="my-auto">
+              { teamData.home.win }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -139,7 +172,11 @@ const Team = () => {
             <p className="my-auto">Lose</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.home.lose }</p>
+            <p className="my-auto">
+              { teamData.home.lose }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -147,7 +184,11 @@ const Team = () => {
             <p className="my-auto">Draw</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.home.draw }</p>
+            <p className="my-auto">
+              { teamData.home.draw }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -155,7 +196,11 @@ const Team = () => {
             <p className="my-auto">GF</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.home.goals.for }</p>
+            <p className="my-auto">
+              { teamData.home.goals.for }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -163,7 +208,11 @@ const Team = () => {
             <p className="my-auto">GA</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.home.goals.against }</p>
+            <p className="my-auto">
+              { teamData.home.goals.against }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
       </section>
@@ -176,7 +225,11 @@ const Team = () => {
             <p className="my-auto">Played</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.away.played }</p>
+            <p className="my-auto">
+              { teamData.away.played }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
 
@@ -185,7 +238,11 @@ const Team = () => {
             <p className="my-auto">Won</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.away.win }</p>
+            <p className="my-auto">
+              { teamData.away.win }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -193,7 +250,11 @@ const Team = () => {
             <p className="my-auto">Lose</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.away.lose }</p>
+            <p className="my-auto">
+              { teamData.away.lose }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -201,7 +262,11 @@ const Team = () => {
             <p className="my-auto">Draw</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.away.draw }</p>
+            <p className="my-auto">
+              { teamData.away.draw }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -209,7 +274,11 @@ const Team = () => {
             <p className="my-auto">GF</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.away.goals.for }</p>
+            <p className="my-auto">
+              { teamData.away.goals.for }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
         <div className="row" style={{ borderBottom: '1px solid #53116E' }}>
@@ -217,7 +286,11 @@ const Team = () => {
             <p className="my-auto">GA</p>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <p className="my-auto">{ teamData.away.goals.against }</p>
+            <p className="my-auto">
+              { teamData.away.goals.against }
+              {' '}
+              <FaCircleArrowRight style={{ color: '#3F1052' }} />
+            </p>
           </div>
         </div>
       </section>

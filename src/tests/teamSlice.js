@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'jest-fetch-mock';
-import { fetchTeamData } from '../redux/teams/teamSlice'; 
+import { fetchTeamData } from '../redux/teams/teamSlice';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

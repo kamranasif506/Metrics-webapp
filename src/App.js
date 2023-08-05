@@ -10,11 +10,12 @@ import Team from './components/Team';
 function App() {
   const dispatch = useDispatch();
   const isLoading = useSelector((store) => store.leagues.isLoading);
-
+  const fetchLeague = useSelector((store) => store.leagues.leagueData);
   useEffect(() => {
-    dispatch(fetchLeagueData('2022'));
-  }, [dispatch]);
-  // console.log(isLoading);
+    if (!fetchLeague.length) {
+      dispatch(fetchLeagueData('2022'));
+    }
+  }, [dispatch, fetchLeague.length]);
   if (isLoading) {
     return (
       <div>Loading...</div>

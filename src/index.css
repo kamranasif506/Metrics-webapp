@@ -377,3 +377,12 @@ hr {
   color: white !important;
   border: var(--bs-btn-border-width) solid #3F1052 !important;
 }
+
+.white-placeholder-input {
+  background-color: #775685 !important;
+  color: white !important;
+}
+
+.white-placeholder-input::placeholder {
+  color: white !important;
+}

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import LeagueList from './LeagueList';
+import DataFilter from './DataFilter';
 
 const Leagues = () => {
   const leagueData = useSelector((store) => store.leagues.leagueData);
-
+  const [filterValue, setFilterValue] = useState('');
   return (
     <section className="container-fluid">
       <div className="row">
@@ -34,20 +35,25 @@ const Leagues = () => {
           </p>
         </div>
       </div>
+      <DataFilter onFilter={setFilterValue} />
       <div className="row my-auto" style={{ background: '#3F1052' }}>
         <p className="col-12 my-auto text-white" style={{ paddingLeft: '5%', paddingBottom: '1%' }}>League Rankings</p>
       </div>
       <div className="row">
         {leagueData.standings && leagueData.standings[0] ? (
-          leagueData.standings[0].map((standing) => (
-            <LeagueList
-              key={standing.team.id}
-              id={standing.team.id}
-              name={standing.team.name}
-              logo={standing.team.logo}
-              rank={standing.rank}
-            />
-          ))
+          leagueData.standings[0]
+            .filter(
+              (standing) => standing.team.name.toLowerCase().includes(filterValue.toLowerCase()),
+            )
+            .map((standing) => (
+              <LeagueList
+                key={standing.team.id}
+                id={standing.team.id}
+                name={standing.team.name}
+                logo={standing.team.logo}
+                rank={standing.rank}
+              />
+            ))
         ) : (
           <p>No standings available</p>
         )}

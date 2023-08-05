@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
+import { FaCircleArrowRight } from 'react-icons/fa6';
 
 const LeagueList = ({
   id, name, logo, rank,
@@ -13,10 +14,14 @@ const LeagueList = ({
   >
     <Link to={`/league/${id}`} style={{ textDecoration: 'none' }}>
 
-      <div id={id} className="w-100">
+      <div id={id} className="w-100" style={{ position: 'relative' }}>
         <img src={logo} style={{ width: '50%', paddingTop: '5%' }} alt={name} className="img mx-auto" />
         <p className="d-flex justify-content-end m-0" style={{ color: '#3F1052', paddingRight: '3%', fontWeight: 'bold' }}>{name}</p>
         <p className="d-flex justify-content-end m-0" style={{ color: '#3F1052', paddingRight: '3%', fontWeight: 'bold' }}>{rank}</p>
+        <FaCircleArrowRight style={{
+          color: '#3F1052', position: 'absolute', right: '3px', top: '4px',
+        }}
+        />
       </div>
     </Link>
   </div>
