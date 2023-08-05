@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component testing League component should render correctly 1`] = `
+<DocumentFragment>
+  <section
+    class="container-fluid"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-6 m-auto"
+      >
+        <img
+          class="img"
+          style="width: 70%; margin: 0px auto; padding-top: 2%; padding-bottom: 2%;"
+        />
+      </div>
+      <div
+        class="col-6 mx-auto my-auto"
+      >
+        <h1
+          class="m-0"
+          style="font-weight: bold; color: rgb(63, 16, 82);"
+        />
+        <p
+          class="m-0"
+          style="color: rgb(63, 16, 82);"
+        >
+          Country:  
+        </p>
+        <p
+          class="m-0"
+          style="color: rgb(63, 16, 82);"
+        >
+          Season:  
+        </p>
+      </div>
+    </div>
+    <div>
+      <div
+        class="row my-2"
+      >
+        <div
+          class="col-12"
+        >
+          <input
+            class="form-control w-100 white-placeholder-input"
+            placeholder="Filter team..."
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="row my-auto"
+      style="background: rgb(63, 16, 82);"
+    >
+      <p
+        class="col-12 my-auto text-white"
+        style="padding-left: 5%; padding-bottom: 1%;"
+      >
+        League Rankings
+      </p>
+    </div>
+    <div
+      class="row"
+    >
+      <p>
+        No standings available
+      </p>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Component testing Team component should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    style=""
+  >
+    Loading...
+  </div>
+</DocumentFragment>
+`;
