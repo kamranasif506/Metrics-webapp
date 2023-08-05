@@ -40,7 +40,7 @@ body {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-  background: #E8E0EB !important;
+  background: #e8e0eb !important;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -84,6 +84,7 @@ h4 {
 p {
   margin-bottom: 1.25rem;
 }
+
 #statTitle {
   font-size: 1.1rem;
 }
@@ -111,7 +112,7 @@ p {
 
   body {
     font-size: 1rem;
-    background-color: #E8E0EB !important;
+    background-color: #e8e0eb !important;
   }
 
   h1,
@@ -375,7 +376,7 @@ hr {
 #dropdown-primary {
   background: #775685 !important;
   color: white !important;
-  border: var(--bs-btn-border-width) solid #3F1052 !important;
+  border: var(--bs-btn-border-width) solid #3f1052 !important;
 }
 
 .white-placeholder-input {
