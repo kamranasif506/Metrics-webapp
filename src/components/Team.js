@@ -13,13 +13,11 @@ const Team = () => {
   useEffect(() => {
     dispatch(fetchTeamData({ id, year }));
   }, [dispatch, id, year]);
-  // console.log(isLoading);
   if (isLoading) {
     return (
       <div>Loading...</div>
     );
   }
-  // Use the 'id' to fetch and display league details from an API or data source
   if (Object.keys(teamData).length === 0) {
     return (
       <div style={{

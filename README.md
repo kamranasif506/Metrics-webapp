@@ -179,7 +179,7 @@ If you like this project just give it a star ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse and The [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/).
+I would like to thank Microverse and The [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) and the Nelson Sakwa on Behance for the design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
