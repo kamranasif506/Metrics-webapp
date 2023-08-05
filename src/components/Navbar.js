@@ -18,7 +18,7 @@ const Navbar = () => {
     }
   };
 
-  const years = Array.from({ length: 2023 - 2004 + 1 }, (_, index) => (2004 + index).toString());
+  const years = Array.from({ length: 2023 - 2010 + 1 }, (_, index) => (2010 + index).toString());
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{ background: '#3F1052' }}>
