@@ -5,14 +5,14 @@ import { FaCircleArrowRight } from 'react-icons/fa6';
 import { fetchTeamData } from '../redux/teams/teamSlice';
 
 const Team = () => {
-  const { id } = useParams();
+  const { id, year } = useParams();
   const dispatch = useDispatch();
   const isLoading = useSelector((store) => store.teams.isLoading);
   const teamData = useSelector((store) => store.teams.teamData);
 
   useEffect(() => {
-    dispatch(fetchTeamData({ id, year: '2022' }));
-  }, [dispatch, id]);
+    dispatch(fetchTeamData({ id, year }));
+  }, [dispatch, id, year]);
   // console.log(isLoading);
   if (isLoading) {
     return (

@@ -28,7 +28,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Leagues />} />
-          <Route path="/league/:id" element={<Team />} />
+          <Route path="/league/:id/:year" element={<Team />} />
         </Routes>
       </Router>
     </div>

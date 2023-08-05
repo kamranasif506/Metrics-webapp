@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaCircleArrowRight } from 'react-icons/fa6';
 
 const LeagueList = ({
-  id, name, logo, rank,
+  id, name, logo, rank, year,
 }) => (
   <div
     className="col-6 m-0 p-0"
@@ -12,7 +12,7 @@ const LeagueList = ({
       cursor: 'pointer', color: '#3F1052', borderLeft: '1px solid #53116E', borderBottom: '1px solid #53116E',
     }}
   >
-    <Link to={`/league/${id}`} style={{ textDecoration: 'none' }}>
+    <Link to={`/league/${id}/${year}`} style={{ textDecoration: 'none' }}>
 
       <div id={id} className="w-100" style={{ position: 'relative' }}>
         <img src={logo} style={{ width: '50%', paddingTop: '5%' }} alt={name} className="img mx-auto" />
@@ -32,6 +32,7 @@ LeagueList.propTypes = {
   name: PropTypes.string.isRequired,
   rank: PropTypes.number.isRequired,
   logo: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
 };
 
 export default LeagueList;

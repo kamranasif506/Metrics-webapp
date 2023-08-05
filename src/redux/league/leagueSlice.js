@@ -30,10 +30,9 @@ const leagueSlice = createSlice({
       })
       .addCase(fetchLeagueData.fulfilled, (state, action) => {
         state.isLoading = false;
-        if(action.payload){
+        if (action.payload) {
           state.leagueData = action.payload[0].league;
         }
-        
       })
       .addCase(fetchLeagueData.rejected, (state) => {
         state.isLoading = false;

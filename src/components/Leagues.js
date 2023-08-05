@@ -52,6 +52,7 @@ const Leagues = () => {
                 name={standing.team.name}
                 logo={standing.team.logo}
                 rank={standing.rank}
+                year={leagueData.season}
               />
             ))
         ) : (
