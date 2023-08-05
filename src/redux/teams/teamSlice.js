@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { baseUrl, apikey } from '../../config/config';
 
-// const leagueUrl = `${baseUrl}&season=2023`;
 const headers = {
   'x-rapidapi-host': 'v3.football.api-sports.io',
   'x-rapidapi-key': apikey,

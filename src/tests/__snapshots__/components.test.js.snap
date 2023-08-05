@@ -37,6 +37,22 @@ exports[`Component testing League component should render correctly 1`] = `
         </p>
       </div>
     </div>
+    <div>
+      <div
+        class="row my-2"
+      >
+        <div
+          class="col-12"
+        >
+          <input
+            class="form-control w-100 white-placeholder-input"
+            placeholder="Filter team..."
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
     <div
       class="row my-auto"
       style="background: rgb(63, 16, 82);"

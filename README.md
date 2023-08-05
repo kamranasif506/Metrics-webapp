@@ -73,7 +73,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- Coming Soon
+- [Live Link](https://metrics-webapp-git-features-kamranasif506.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

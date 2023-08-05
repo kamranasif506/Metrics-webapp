@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const DataFilter = ({ onFilter }) => {
   const [filterValue, setFilterValue] = useState('');
-  //   console.log(data);
   const handleFilterChange = (event) => {
     const { value } = event.target;
     setFilterValue(value);
